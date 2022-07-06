@@ -1,16 +1,13 @@
-#define CMDLENGTH 45
-#define DELIMITER "  "
-#define CLICKABLE_BLOCKS
+#define CMDLENGTH 100
+#define DELIMITER " "
+// #define CLICKABLE_BLOCKS
 
 const Block blocks[] = {
-	BLOCK("sb-mail",    1800, 17),
-	BLOCK("sb-music",   0,    18),
-	BLOCK("sb-disk",    1800, 19),
-	BLOCK("sb-memory",  10,   20),
-	BLOCK("sb-loadavg", 5,    21),
-	BLOCK("sb-mic",     0,    26),
-	BLOCK("sb-record",  0,    27),
-	BLOCK("sb-volume",  0,    22),
-	BLOCK("sb-battery", 5,    23),
-	BLOCK("sb-date",    1,    24)
+	// BLOCK("~/.local/scripts/statusbar.sh cmus",             5,      6),
+	BLOCK("~/.local/scripts/statusbar.sh weather",          60,     4),
+	BLOCK("~/.local/scripts/statusbar.sh wlan",             3,      5),
+	BLOCK("~/.local/scripts/statusbar.sh pa_mic",           10,     1),
+    BLOCK("~/.local/scripts/statusbar.sh pa_vol",           10,     2),
+	BLOCK("~/.local/scripts/statusbar.sh bat",              1,      3),
+	BLOCK("~/.local/scripts/statusbar.sh date",             1,      10)
 };
