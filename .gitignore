@@ -1,4 +1,8 @@
-dmenu/config.h
 dmenu/dmenu
 dmenu/stest
+dmenu/config.h
 dmenu/*.o
+
+dwm/dwm
+dwm/config.h
+dwm/*.o
