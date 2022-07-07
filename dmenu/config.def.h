@@ -6,6 +6,7 @@ static int fuzzy = 1;                      /* -F  option; if 0, dmenu doesn't us
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
 	"Cantarell:size=9",
+    "JetBrainsMono Nerd Font:size=11",
     "M+ 1c:size=9",
     "Apple Color Emoji:size=9"
 };
