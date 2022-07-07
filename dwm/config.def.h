@@ -96,11 +96,11 @@ static Key keys[] = {
 	{ 0, XF86XK_MonBrightnessDown,  spawn,      SHCMD("xbacklight -dec 5") },
 	{ 0, XF86XK_MonBrightnessUp,    spawn,      SHCMD("xbacklight -inc 5") },
     
-    // Screen rotation. To be honest it works now but script should be review and repaired.
-    // { MODKEY, XK_Up,                spawn,      SHCMD("screenr normal") },
-    // { MODKEY, XK_Down,              spawn,      SHCMD("screenr inverted") },
-    // { MODKEY, XK_Left,              spawn,      SHCMD("screenr left") },
-    // { MODKEY, XK_Right,             spawn,      SHCMD("screenr right") },
+    // Screen rotation
+    { MODKEY, XK_Up,                spawn,      SHCMD("screenr normal") },
+    { MODKEY, XK_Down,              spawn,      SHCMD("screenr inverted") },
+    { MODKEY, XK_Left,              spawn,      SHCMD("screenr left") },
+    { MODKEY, XK_Right,             spawn,      SHCMD("screenr right") },
 
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
