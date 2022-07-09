@@ -1,5 +1,5 @@
 #define CMDLENGTH 100
-#define DELIMITER "  "
+#define DELIMITER " "
 // #define CLICKABLE_BLOCKS
 
 const Block blocks[] = {

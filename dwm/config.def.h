@@ -14,7 +14,7 @@ static const int topbar             = 0;     /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
-    "Cantarell:size=9",
+    "Fira Mono:size=9",
     "JetBrainsMono Nerd Font:size=11",
     "M+ 1c:size=9",
     "Apple Color Emoji:size=9",
@@ -31,7 +31,7 @@ static const char *colors[][3]      = {
 };
 
 static const char *const autostart[] = {
-	"picom", NULL,
+	"picom", "--experimental-backends", NULL,
     "dwmblocks", NULL,
     "nm-applet", NULL,
     "redshift-gtk", NULL,
