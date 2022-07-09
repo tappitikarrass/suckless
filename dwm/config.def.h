@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int snap      = 8;       /* snap pixel */
 static const int swallowfloating    = 1;        /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;   /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
@@ -10,10 +10,11 @@ static const unsigned int systrayspacing = 2;   /* systray spacing */
 static const int systraypinningfailfirst = 1;   /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray        = 1;     /* 0 means no systray */
 static const int showbar            = 1;     /* 0 means no bar */
-static const int topbar             = 0;     /* 0 means bottom bar */
+static const int topbar             = 1;     /* 0 means bottom bar */
 static const int focusonwheel       = 0;
 static const int user_bh            = 20;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = {
+    // "Cantarell:size=9",
     "Fira Mono:size=9",
     "JetBrainsMono Nerd Font:size=11",
     "M+ 1c:size=9",
@@ -21,13 +22,20 @@ static const char *fonts[]          = {
 };
 static const char *colors[][3]      = {
 	/*                       fg         bg         border   */
-	[SchemeNorm]        = { "#f8f8f8", "#181818", "#383838" },
-	[SchemeSel]         = { "#f8f8f8", "#282828", "#f8f8f8" },
-	[SchemeStatus]      = { "#f8f8f8", "#181818", "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
-	[SchemeTagsSel]     = { "#f8f8f8", "#282828", "#000000" }, // Tagbar left selected {text,background,not used but cannot be empty}
-    [SchemeTagsNorm]    = { "#f8f8f8", "#181818", "#000000" }, // Tagbar left unselected {text,background,not used but cannot be empty}
-    [SchemeInfoSel]     = { "#f8f8f8", "#282828", "#000000" }, // infobar middle  selected {text,background,not used but cannot be empty}
-    [SchemeInfoNorm]    = { "#f8f8f8", "#181818", "#000000" }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeStatus]      = { "#839496", "#002b36", "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	[SchemeNorm]        = { "#839496", "#002b36", "#002b36" },
+    [SchemeTagsNorm]    = { "#839496", "#002b36", "#000000" }, // Tagbar left unselected {text,background,not used but cannot be empty}
+    [SchemeInfoNorm]    = { "#839496", "#002b36", "#000000" }, // infobar middle  unselected {text,background,not used but cannot be empty}
+	[SchemeSel]         = { "#839496", "#073642", "#839496" },
+	[SchemeTagsSel]     = { "#839496", "#073642", "#000000" }, // Tagbar left selected {text,background,not used but cannot be empty}
+    [SchemeInfoSel]     = { "#839496", "#073642", "#000000" }, // infobar middle  selected {text,background,not used but cannot be empty}
+	// [SchemeNorm]        = { "#f8f8f8", "#181818", "#383838" },
+	// [SchemeSel]         = { "#f8f8f8", "#282828", "#f8f8f8" },
+	// [SchemeStatus]      = { "#f8f8f8", "#181818", "#000000" }, // Statusbar right {text,background,not used but cannot be empty}
+	// [SchemeTagsSel]     = { "#f8f8f8", "#282828", "#000000" }, // Tagbar left selected {text,background,not used but cannot be empty}
+ //    [SchemeTagsNorm]    = { "#f8f8f8", "#181818", "#000000" }, // Tagbar left unselected {text,background,not used but cannot be empty}
+ //    [SchemeInfoSel]     = { "#f8f8f8", "#282828", "#000000" }, // infobar middle  selected {text,background,not used but cannot be empty}
+ //    [SchemeInfoNorm]    = { "#f8f8f8", "#181818", "#000000" }, // infobar middle  unselected {text,background,not used but cannot be empty}
 };
 
 static const char *const autostart[] = {
@@ -62,8 +70,8 @@ static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen win
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "T",      tile },    /* first entry is default */
-	{ "F",      NULL },    /* no layout function means floating behavior */
+	{ "",      tile },    /* first entry is default */
+	{ "",      NULL },    /* no layout function means floating behavior */
 };
 
 /* key definitions */
